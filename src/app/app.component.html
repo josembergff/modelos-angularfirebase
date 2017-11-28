@@ -1,5 +1,15 @@
-<ul>
-  <li *ngFor="let item of items | async">
-    {{item.titulo}}
-  </li>
-</ul>
+<div class="content-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of items | async">
+          {{item.titulo}}
+          <button class="btn btn-primary text-rigth" (click)="abrirItem(item.$key)">Votar
+            <span class="badge">{{item.votos}}</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>

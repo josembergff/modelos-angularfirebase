@@ -13,7 +13,17 @@ export class AppComponent {
   title = 'app';
   items: FirebaseListObservable<any[]>;
 
-  constructor(db: AngularFireDatabase) {
+  constructor(private db: AngularFireDatabase) {
     this.items = db.list('/cursos');
+  }
+
+  abrirItem(id: string) {
+    const obj = this.db.object('/cursos/' + id);
+    obj.$ref.transaction(item => {
+      let total = item.votos || 0;
+      total++;
+      this.items.update(id, { votos: total });
+    });
+    console.log('Id clicado ', obj);
   }
 }
