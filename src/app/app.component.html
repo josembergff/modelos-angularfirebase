@@ -1,11 +1,19 @@
 <div class="content-fluid">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12 text-center">
+      <app-autenticar></app-autenticar>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-center">
       <ul class="list-group">
         <li class="list-group-item" *ngFor="let item of items | async">
           {{item.titulo}}
-          <button class="btn btn-primary text-rigth" (click)="abrirItem(item.$key)">Votar
+          <button class="btn btn-primary text-rigth" (click)="votar(item)">Votar
             <span class="badge">{{item.votos}}</span>
+          </button>
+          <button class="btn btn-danger text-rigth" (click)="excluir(item)">Excluir
+
           </button>
         </li>
       </ul>

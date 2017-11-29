@@ -6,11 +6,12 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: 'AIzaSyDi2YOCedTijFZ-UqVHfKI-kN2lLcnJjIc',
-    authDomain: 'vife-votos.firebaseapp.com',
-    databaseURL: 'https://vife-votos.firebaseio.com',
-    projectId: 'vife-votos',
-    storageBucket: '',
-    messagingSenderId: '872271470'
-  }
+    apiKey: 'AIzaSyAUNmlplI7O6mTFrM66WAgRDZ5i0yM3Aao',
+    authDomain: 'vife-votador.firebaseapp.com',
+    databaseURL: 'https://vife-votador.firebaseio.com',
+    projectId: 'vife-votador',
+    storageBucket: 'vife-votador.appspot.com',
+    messagingSenderId: '514885234233'
+  },
+  firebaseAuth: { provider: '', method: '' }
 };
