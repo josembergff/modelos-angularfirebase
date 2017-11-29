@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
     const obj = this.itemsCollection.doc(valor.id.toString());
     const votacao: number = (valor.votos ? valor.votos.valueOf() : 0) + 1;
     const emails = valor.emails || [];
-    if (emails.indexOf(this.afAuth.auth.currentUser.email) < 0) {
+    if (this.afAuth.auth.currentUser && emails.indexOf(this.afAuth.auth.currentUser.email) < 0) {
       emails.push(this.afAuth.auth.currentUser.email);
     }
     obj.update({ votos: votacao, emails: emails });
