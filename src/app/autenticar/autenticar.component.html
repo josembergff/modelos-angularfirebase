@@ -1,5 +1,11 @@
 <div>
   <div *ngIf="afAuth.authState | async; let user; else showLogin">
+
+    <div class="col-xs-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <img src="{{user.photoURL}}" alt="perfil">
+      </a>
+    </div>
     <h1>Bem vindo {{ user.displayName }}!</h1>
     <button class="btn btn-primary" (click)="logout()">Sair</button>
   </div>
