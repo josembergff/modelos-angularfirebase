@@ -12,6 +12,5 @@ export const environment = {
     projectId: 'vife-votador',
     storageBucket: 'vife-votador.appspot.com',
     messagingSenderId: '514885234233'
-  },
-  firebaseAuth: { provider: '', method: '' }
+  }
 };

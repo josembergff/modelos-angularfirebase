@@ -1,6 +1,15 @@
+<div>
+  <div *ngIf="afAuth.authState | async; let user; else showLogin">
+    <h1>Bem vindo {{ user.displayName }}!</h1>
+    <button class="btn btn-primary" (click)="logout()">Sair</button>
+  </div>
+</div>
 <div class="row">
   <div class="col-md-12">
-    <button class="btn btn-primary" (click)="mostrarFormulario=!mostrarFormulario">Autenticar</button>
+    <ng-template #showLogin>
+      <p>Por favor autentique:</p>
+      <button class="btn btn-primary" (click)="login()">Entrar via Github</button>
+    </ng-template>
   </div>
 </div>
 <div class="row">
