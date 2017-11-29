@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./autenticar.component.css']
 })
 export class AutenticarComponent implements OnInit {
+  mostrarFormulario: Boolean;
+
   constructor() {}
 
   ngOnInit() {}
